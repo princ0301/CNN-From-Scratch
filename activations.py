@@ -13,7 +13,7 @@ class Tanh(Activation):
         
         super().__init__(tanh, tanh_prime)
 
-class sigmoid(Activation):
+class Sigmoid(Activation):
     
     def __init__(self):
         def sigmoid(x):

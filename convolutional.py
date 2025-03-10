@@ -23,7 +23,7 @@ class Convolutional(Layer):
                 self.output[i] += signal.correlate2d(self.input[j], self.kernels[i, j], "valid")
         return self.output
     
-    def forward(self, output_gradient, learning_rate):
+    def backward(self, output_gradient, learning_rate):
         kernels_gradient = np.zeros(self.kernels_shape)
         input_gradient = np.zeros(self.input_shape)
 
